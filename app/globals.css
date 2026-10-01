@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
+/* 🎨 5·6주차와 같은 색감 (스페인 느낌) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --크림: #fdf6ec;
+  --종이: #fffdf9;
+  --테라코타: #c2553c;
+  --테라코타진: #a3452f;
+  --머스터드: #d99a2b;
+  --먹색: #3d3430;
+  --연한글자: #8a7d74;
+  --테두리: #ecdfd0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--크림);
+  color: var(--먹색);
+  font-family: var(--font-고운돋움), "Apple SD Gothic Neo", "Malgun Gothic",
+    system-ui, sans-serif;
 }
+
+@keyframes 떠오름 {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.떠오름 { animation: 떠오름 0.3s ease-out; }
+
+/* ⏳ 진행 중 표시 */
+@keyframes 콩콩 {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40%           { transform: translateY(-5px); opacity: 1; }
+}
+.점 { display: inline-block; animation: 콩콩 1.2s infinite; }
+.점:nth-child(2) { animation-delay: 0.15s; }
+.점:nth-child(3) { animation-delay: 0.3s; }

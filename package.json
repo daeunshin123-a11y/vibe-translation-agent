@@ -9,6 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.82",
+    "@ai-sdk/react": "^4.0.121",
+    "@libsql/client": "^0.18.0",
+    "@tavily/core": "^0.7.13",
+    "ai": "^7.0.118",
     "next": "16.3.6",
     "react": "19.2.8",
     "react-dom": "19.2.8"
